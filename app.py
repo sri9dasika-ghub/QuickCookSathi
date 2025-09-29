@@ -2,7 +2,7 @@ from flask import Flask, request
 import re
 
 
-app = Flask(__app__)
+app = Flask(__name__)
 
 
 def extract_ingredients(message): 
@@ -28,8 +28,9 @@ def whatsapp_bot():
     return f"<Response><Message>{reply}</Message></Response>", 200
 
 
-if __app__ == '__main__':
+if __name__ == '__main__':
     app.run()
+
 
 
 
