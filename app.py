@@ -12,7 +12,7 @@ def extract_ingredients(message):
  
 def searchrecipes_online(ingredients): 
     query = "+".join(ingredients) 
-     search_url = f"https://www.forksoverknives.com/?s={query}" 
+    search_url = f"https://www.forksoverknives.com/?s={query}" 
     return search_url
 
 def generate_response(message): 
@@ -31,5 +31,6 @@ def whatsapp_bot():
 
 if __app__ == '__main__':
     app.run()
+
 
 
