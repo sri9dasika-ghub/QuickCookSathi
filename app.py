@@ -2,7 +2,7 @@ from flask import Flask, request
 import re
 
 
-app = Flask(__name__)
+app = Flask(__app.py__)
 
 
 # 🧠 Extract ingredients from user message
@@ -47,3 +47,4 @@ def whatsapp_bot():
 
 if __name__ == '__main__':
     app.run()
+
