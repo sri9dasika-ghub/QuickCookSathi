@@ -17,10 +17,9 @@ def searchrecipes_online(ingredients):
 
 def generate_response(message): 
     ingredients = extract_ingredients(message) 
-recipelink = searchrecipes_online(ingredients) 
-return f"🔍\nBased on your ingredients, here's a recipe search:\n"
-            f"{recipe_link}\nTry exploring the top results!")
-
+    recipelink = searchrecipes_online(ingredients) 
+    return f"🔍\nBased on your ingredients, here's a recipe search:\n" \
+           f"{recipelink}\nTry exploring the top results!"
 
 @app.route('/whatsapp', methods=['POST'])
 def whatsapp_bot():
@@ -31,6 +30,7 @@ def whatsapp_bot():
 
 if __app__ == '__main__':
     app.run()
+
 
 
 
