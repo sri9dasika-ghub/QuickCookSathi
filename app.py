@@ -1,8 +1,7 @@
 from flask import Flask, request
 import re
 
-from twilio.twiml.messaging_response
-import MessagingResponse
+from twilio.twiml.messaging_response import MessagingResponse
 
 app = Flask(__name__)
 
@@ -35,6 +34,7 @@ def whatsapp_bot():
 
 if __name__ == '__main__':
     app.run()
+
 
 
 
