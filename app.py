@@ -1,6 +1,8 @@
 from flask import Flask, request
 import re
 
+from twilio.twiml.messaging_response
+import MessagingResponse
 
 app = Flask(__name__)
 
@@ -24,7 +26,7 @@ def generate_response(message):
 @app.route('/whatsapp', methods=['POST'])
 def whatsapp_bot():
     incoming_msg = request.form.get('Body')
-    replytext = generateresponse(incoming_msg)
+    reply_text = generate_response(incoming_msg)
 
     # Create Twilio XML response
     resp = MessagingResponse()
@@ -33,6 +35,7 @@ def whatsapp_bot():
 
 if __name__ == '__main__':
     app.run()
+
 
 
 
