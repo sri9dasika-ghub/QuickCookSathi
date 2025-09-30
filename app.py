@@ -24,13 +24,15 @@ def generate_response(message):
 @app.route('/whatsapp', methods=['POST'])
 def whatsapp_bot():
     incoming_msg = request.form.get('Body')
-    reply = generate_response(incoming_msg)
-    return f"<Response><Message>{reply}</Message></Response>", 200
+    replytext = generateresponse(incoming_msg)
 
+    # Create Twilio XML response
+    resp = MessagingResponse()
+    resp.message(reply_text)
+    return str(resp)
 
-if __name__ == '__main__':
+if name == 'main':
     app.run()
-
 
 
 
