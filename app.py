@@ -31,8 +31,9 @@ def whatsapp_bot():
     resp.message(reply_text)
     return str(resp)
 
-if name == 'main':
+if __name__ == '__main__':
     app.run()
+
 
 
 
